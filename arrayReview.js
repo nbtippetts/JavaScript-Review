@@ -2,7 +2,10 @@ var threeItems = [1,2,3];
 //create a function named 'last' that returns the last item from 'threeItems'
 //alert the result of your function
 
-  //code here
+  function last(){
+      return threeItems[2];
+    }
+alert(last());
 
 
 
@@ -10,11 +13,18 @@ var threeItems = [1,2,3];
 
 
 
-//Loop through evenArray removing all values that aren't even 
+//Loop through evenArray removing all values that aren't even
 var evenArray = [1,2,3,6,22,98,45,23,22,12];
 
-  //code here
-
+function even(evenArray){
+  for (var i = 0; i < evenArray.length; i++){
+    if (evenArray[i] % 2 !== 0){
+      evenArray.splice(i, 1);
+    }
+  }
+  return evenArray;
+}
+even(evenArray);
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
@@ -26,9 +36,16 @@ var getRandomArbitrary = function() {
 }
 var randomArray = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
 
-  //code here
-
-
+function match(randomArray){
+ var random = getRandomArbitrary()
+ for (var i = 0; i < randomArray.length; i++){
+   if (randomArray[i] === random){
+     return true;
+   }
+  }
+ return false
+}
+console.log(match(randomArray));
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
 
@@ -37,7 +54,8 @@ var randomArray = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
 var first = [1,2,3,4,5];
 var second;
 
-  //code here
+second = first.slice();
+second.push(6, 7);
 
 alert(first) //[1,2,3,4,5];
 alert(second) //[1,2,3,4,5,6,7];
@@ -51,19 +69,17 @@ alert(second) //[1,2,3,4,5,6,7];
 //write a function called longest that takes in our sentence variable, and returns the longest word in that sentence.
 var sentence = "Dev Mountain is the best"
 
-  //code here
 
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
 
 
-//write a function called capitalize that takes in the myPoem variable and capitalizes every word 
+//write a function called capitalize that takes in the myPoem variable and capitalizes every word
 var myPoem = 'What is a jQuery but a misunderstood object?'
 //What is a jQuery but a misunderstood object? --> What Is A JQuery But A Misunderstood Object?
 
-  //code here
-
+  
 
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
