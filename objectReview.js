@@ -66,16 +66,21 @@ var user = {
 
 //create an empty object called methodCollection.
 
-  //Your code here
+  var methodCollection = {}
 
 //Now add two methods (functions that are properties on objects) to your methodCollection object. One called 'alertHello' which alerts 'hello' and another method called logHello which logs 'hello' to the console.
 
-  //Your code here
+methodCollection.alertHello = function(){
+  alert('hello');
+}
+methodCollection.logHello = function(){
+  console.log('hello');
+}
 
 //Now call your alertHello and logHello methods.
 
-  //Your code here
-
+methodCollection.alertHello();
+methodCollection.logHello();
 
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */

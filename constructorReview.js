@@ -54,7 +54,7 @@ Animal.prototype.food = ['Meat', 'pig', 'all of the food'];
 
 //At this point, if we wanted to add something to every istance of person could we?
 
-  //Yes or no? and why or why not?
+  //No, because we have no prototype for person.
 
 
 
