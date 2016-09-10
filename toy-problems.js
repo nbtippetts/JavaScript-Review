@@ -7,7 +7,15 @@ Write a function that takes an array of integers and returns the sum of the inte
 plusOneSum([1, 2, 3, 4]); // 14
 
 */
+function plusOneSum(arr){
+  for (var = 0; i < arr.length; i++){
 
+      return arr[i] + 1;
+    }
+  }
+  return arr;
+}
+plusOneSum([1, 2, 3, 4]); // 14
 
 
 /*
@@ -18,6 +26,24 @@ flatten([1, 2, [3, [4], 5, 6], 7]) // [1, 2, 3, 4, 5, 6, 7]
 
 */
 
+
+
+function flat(array){
+  var newArr = []
+  function loopsArray(array){
+    array.forEach(function(elem){
+      if (Array.isArray(elem)){
+        loopsArray(elem);
+      }
+      else{
+        newArr.push(elem);
+      }
+    });
+  }
+  loopsArray(array);
+  return newArr;
+}
+console.log(flat([1, 2, [3, [4], 5, 6], 7]));
 
 
 /*

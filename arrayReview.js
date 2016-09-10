@@ -16,15 +16,7 @@ alert(last());
 //Loop through evenArray removing all values that aren't even
 var evenArray = [1,2,3,6,22,98,45,23,22,12];
 
-function even(evenArray){
-  for (var i = 0; i < evenArray.length; i++){
-    if (evenArray[i] % 2 !== 0){
-      evenArray.splice(i, 1);
-    }
-  }
-  return evenArray;
-}
-even(evenArray);
+
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
@@ -43,7 +35,7 @@ function match(randomArray){
      return true;
    }
   }
- return false
+ return false;
 }
 console.log(match(randomArray));
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
