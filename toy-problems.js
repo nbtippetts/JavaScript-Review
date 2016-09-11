@@ -7,15 +7,13 @@ Write a function that takes an array of integers and returns the sum of the inte
 plusOneSum([1, 2, 3, 4]); // 14
 
 */
-function plusOneSum(arr){
-  for (var = 0; i < arr.length; i++){
-
-      return arr[i] + 1;
-    }
-  }
-  return arr;
+function sum(array){
+ var newArr = array.map(function(num){
+    return num + 1;
+  });
+  return newArr;
 }
-plusOneSum([1, 2, 3, 4]); // 14
+console.log(sum([1, 2, 3, 4])); // 14
 
 
 /*
@@ -59,7 +57,21 @@ There is an array of non-negative integers. A second array is formed by shufflin
 
 */
 
+var arrays = [1, 2, 3, 4, 5, 6, 7, 8,]
+function shuffle(array){
+  var i = 0,
+      j = 0,
+      diff = null;
+  for (i = array.length - 1; i > 0; i -= 1){
+    j = Math.floor(Math.random() * array.length);
+      diff = array[i]
+      array[i] = array[j]
+      array[j] = diff;
+  }
+  return array;
+}
 
+console.log(shuffle(arrays));
 
 
 
