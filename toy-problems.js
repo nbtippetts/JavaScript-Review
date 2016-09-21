@@ -58,21 +58,26 @@ There is an array of non-negative integers. A second array is formed by shufflin
 */
 
 var arrays = [1, 2, 3, 4, 5, 6, 7, 8,]
+
 function shuffle(array){
   var i = 0,
       j = 0,
+      random = Math.floor(Math.random() * array.length);
       diff = null;
   for (i = array.length - 1; i > 0; i -= 1){
     j = Math.floor(Math.random() * array.length);
       diff = array[i]
       array[i] = array[j]
       array[j] = diff;
+
   }
+   array.splice(random, 1);
   return array;
 }
 
-console.log(shuffle(arrays));
 
+
+console.log(shuffle(arrays));
 
 
 /*
