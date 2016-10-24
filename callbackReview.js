@@ -147,7 +147,15 @@ getUserById('16t', users, function(user){
 
 
 //Looks through each value in the list, returning the first one that passes a truth test
-var numbers  = [1, 2, 3, 4, 5, 6];
-find(numbers, function(num){
-  return num % 2 == 0; //should return 2
-})
+function find (even){
+  var first = [];
+  for (var i = 0; i < even.length; i++){
+    if (even[i] === 2) {
+      first.push(even[i]);
+    }
+  }
+  return first;
+}
+
+ var nums = find(numbers);
+  console.log(nums)

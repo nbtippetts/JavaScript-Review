@@ -16,6 +16,19 @@ alert(last());
 //Loop through evenArray removing all values that aren't even
 var evenArray = [1,2,3,6,22,98,45,23,22,12];
 
+function findEven (evens) {
+  var even = [];
+  for (var i = 0; i < evens.length; i++){
+    if (evens[i] % 2 === 0){
+      even.push(evens[i])
+    }
+  }
+  return even;
+}
+
+  var find = findEven(evenArray);
+  console.log(find);
+
 
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
@@ -61,6 +74,20 @@ alert(second) //[1,2,3,4,5,6,7];
 //write a function called longest that takes in our sentence variable, and returns the longest word in that sentence.
 var sentence = "Dev Mountain is the best"
 
+  function longest (long){
+    var long = long.split(' ');
+    var word = 0;
+    for (var i = 0; i < long.length; i++){
+      if (long[i].length > word){
+        word = long[i].length;
+      }
+    }
+    return word
+  }
+
+  var longestWord = longest(sentence);
+  console.log(longestWord);
+
 
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
@@ -79,7 +106,8 @@ function capitalize(str) {
   return splitStr.join(' ');
 }
 
-console.log(capitalize(my));
+  var find = capitalize(myPoem);
+  console.log(find);
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
 
 
