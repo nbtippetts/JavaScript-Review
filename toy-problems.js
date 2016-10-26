@@ -57,29 +57,89 @@ There is an array of non-negative integers. A second array is formed by shufflin
 
 */
 
-    var arrays = [1, 2, 3, 4, 5, 6, 7, 8,]
+  //didnt understand what the question was asking so I made two different functions.
+  // The first function "shuffle" takes in the first array "arrays" shuffles it and deletes a random value making a new array.
+  //Then I passed in the shuffled array and a second array "testArray1" with the same values as the first array "arrays".
+  //Then I made a new function "find" and make a empty array "newArr" Then looped through "testArray1" and tested the values from the shuffled array and "testArray1".
+  //Then I push the one value in "testArray1" that does not match any of the values in the shuffled array.
+  //Giving Me the random number that we deleted from the first array "arrays".
 
-    function shuffle(array){
-      var i = 0,
-          j = 0,
-          random = Math.floor(Math.random() * array.length);
-          diff = null;
-      for (i = array.length - 1; i > 0; i -= 1){
-        j = Math.floor(Math.random() * array.length);
-          diff = array[i]
-          array[i] = array[j]
-          array[j] = diff;
+  var arrays = [1, 2, 3, 4, 5, 6, 7, 8]
+  var testArray1 = [1, 2, 3, 4, 5, 6, 7, 8]
+
+  function shuffle(array){
+   var i = 0,
+       j = 0,
+       random = Math.floor(Math.random() * array.length);
+       diff = null;
+   for (i = array.length - 1; i > 0; i -= 1){
+     j = Math.floor(Math.random() * array.length);
+       diff = array[i]
+       array[i] = array[j]
+       array[j] = diff;
+   }
+   console.log("array 1", array)
+   array.splice(random, 1);
+   console.log("array 2", array)
+   return array;
+  }
+
+
+  function find(arr1, arr2){
+  // console.log(arr1)
+    var newArr = []
+    for (var i = 0; i < arr2.length; i++){
+        //console.log('index', arr1.indexOf(arr2[i]))
+        if (arr1.indexOf(arr2[i]) == -1){
+           newArr.push(arr2[i])
+           //console.log("this is new array", newArr)
+        }
+    }
+    return newArr
+  }
+
+  shuffle(arrays, testArray1);
+  console.log('function 2', find(arrays, testArray1));
+
+
+//this function returns the missing value in arr2
+
+  var arr1 = [1, 2, 3, 4, 5, 6, 7, 8];
+  var arr2 = [2, 3, 7, 1, 8, 6, 5]; //should return 4
+
+  function shuffleArray(arr){
+     var i = 0,
+         j = 0,
+         random = Math.floor(Math.random() * arr.length);
+         diff = null;
+     for (i = arr.length - 1; i > 0; i -= 1){
+       j = Math.floor(Math.random() * arr.length);
+         diff = arr[i]
+         arr[i] = arr[j]
+         arr[j] = diff;
+
+     }
+     arr.splice(random, 1);
+     console.log("array 1", arr)
+     return arr;
+  }
+
+  function findNumber(array1, array2){
+  //console.log(arr1, arr2)
+    var newArr = []
+    for (var i = 0; i < array1.length; i++){
+      //console.log('index', arr1.indexOf(arr2[i]))
+      if (array2.indexOf(array1[i]) == -1){
+        console.log('array 2', array2)
+        return array1[i]
 
       }
-       array.slice(random);
-      return array;
     }
+  }
+  shuffleArray(arr1, arr2);
+  console.log('found missing value', findNumber(arr1, arr2));
 
 
-
-    var randoms = shuffle(arrays);
-    console.log(randoms.splice(1));
-    console.log(randoms.splice(0));
 
 
 /*
